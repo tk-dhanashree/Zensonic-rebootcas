@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>ZenSonic</title>
+	<meta name="keywords" content="HTML, CSS, JavaScript">
+	<meta name="author" content="www.neotix.com.br">
+	<meta charset="UTF-8" />
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo.png">
+	<link rel="manifest" href="assets/favicons/site.webmanifest">
+	<link href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.2.19/dist/tailwind.min.css" rel="stylesheet">
+	<!-- <link href="https://unpkg.com/react-icons/io5" rel="stylesheet"> -->
+	<meta name="msapplication-TileColor" content="#F2CE6E">
+	<meta name="theme-color" content="#F2CE6E">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/splitting/dist/splitting.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/splitting/dist/splitting-cells.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+	<script>
+		document.documentElement.className = "js";
+		var supportsCssVars = function () { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e };
+		supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
+	</script>
+	<script src="//tympanus.net/codrops/adpacks/analytics.js"></script>
+</head>
+
+<body>
+
+	<!--LOADER-->
+	<div class="loader">
+		<p>Loading... Please wait</p>
+		<div class="progress"></div>
+	</div>
+
+	<!--WEBSITE-->
+	<main className="flex min-h-screen flex-col">
+
+		<!--NAVBAR-->
+		<div class="flex top-0 left-0">
+			<img class="logo" src="assets/images/logo.png" alt="Logo">
+			<!-- <nav>
+				<button id="toggle-menu-button" class="z-50 md:hidden relative custom-margin -top-32">
+					<span class="sr-only">Toggle Menu</span>
+					<div id="open" class="h-7 flex flex-col items-end justify-between">
+						<span class="block h-0.5 w-8 bg-green-900 rounded-full"></span>
+						<span class="block h-0.5 w-8 bg-green-900 rounded-full"></span>
+						<span class="block h-0.5 w-8 bg-green-900 rounded-full"></span>
+					</div>
+					<div id="close" class="hidden h-7 flex flex-col items-end justify-between">
+						<span class="block h-0.5 w-8 bg-red-100 rounded-full origin-left transform rotate-45 translate-y-0.5"></span>
+						<span class="block h-0.5 w-8 bg-red-100 rounded-full origin-left transform -rotate-45 -translate-y-0.5"></span>
+					</div>
+				</button>
+				<div id="toggle-menu" class="hidden md:block font-bold text-gray-700 text-right text-3xl bg-gray-800 top-0 left-0 h-screen w-screen flex flex-col items-center justify-center md:text-lg md:text-gray-700 md:bg-transparent md:w-auto md:h-auto md:text-left">
+					<ul class="flex flex-col gap-y-7 md:flex-row md:gap-2 py-8">
+						<li class="mr-60"></li>
+						<li class="mr-32">
+							<div class="flex bg-black rounded-2xl items-center border-green-500 border-t-1 border-r-1 border-l-1 border-b-4">
+								<input type="text" placeholder="Search" id="nameInput" class="w-96 h-8 rounded-2xl bg-black px-8">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.146 15.3707 4.888 14.112C3.63 12.8533 3.00067 11.316 3 9.5C3 7.68333 3.62933 6.146 4.888 4.888C6.14667 3.63 7.684 3.00067 9.5 3C11.3167 3 12.8543 3.62933 14.113 4.888C15.3717 6.14667 16.0007 7.684 16 9.5C16 10.2333 15.8833 10.925 15.65 11.575C15.4167 12.225 15.1 12.8 14.7 13.3L21 19.6L19.6 21ZM9.5 14C10.75 14 11.8127 13.5627 12.688 12.688C13.5633 11.8133 14.0007 10.7507 14 9.5C14 8.25 13.5627 7.18767 12.688 6.313C11.8133 5.43833 10.7507 5.00067 9.5 5C8.25 5 7.18767 5.43767 6.313 6.313C5.43833 7.18833 5.00067 8.25067 5 9.5C5 10.75 5.43767 11.8127 6.313 12.688C7.18833 13.5633 8.25067 14.0007 9.5 14Z" fill="#3F3E46"/>
+								</svg>
+							</div>
+						</li>
+						<li class="md:border-r md:px-4 md:border-green-200">
+							<a href="" title"Go to XXX" class="transition ease-in-out duration-150 hover:underline  hover:text-green-500">Home</a>
+						</li>
+						<li class="md:border-r md:px-4 md:border-green-200">
+							<a href="" title"Go to XXX" class="transition ease-in-out duration-150 hover:underline  hover:text-green-500">About</a>
+						</li>
+						<li class="md:border-r md:px-4 md:border-green-200">
+							<a href="" title"Go to XXX" class="transition ease-in-out duration-150 hover:underline  hover:text-green-500">Shop</a>
+						</li>
+						<li class="md:border-r md:px-4 md:border-green-200">
+							<a href="" title"Go to XXX" class="transition ease-in-out duration-150 hover:underline  hover:text-green-500">Cart</a>
+						</li>
+						<li class="md:border-r md:px-4 md:border-green-200">
+							<a href="" title"Go to XXX" class="transition ease-in-out duration-150 hover:underline  hover:text-green-500">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</nav> -->
+		</div>
+
+		<!--BODY-->
+		<div class="container w-screen h-full">
+
+			<!--SECTION ONE-->
+			<section class="section first">
+				<div class="section--one--container">
+					<h3 class="M-title content__title" data-splitting data-effect8>
+						Unleash Your Zen with<br />
+						<span class="sub-title text-center content__title" data-splitting data-effect8>
+							ZenSonic
+						</span>
+					</h3>
+					<p class="sub-para text-center content__title text-center" data-splitting data-effect1>
+						Where comfort, style, and innovation converge to<br /> elevate your listening experience.
+					</p>
+				</div>
+				<div class="section--one--container"></div>
+			</section>
+
+			<!--SECTION TWO-->
+			<section class="section second">
+				<div class="section--two--container">
+					<h3 class="sub-title content__title mr-10" data-splitting data-effect8>
+						TrendEase Design
+					</h3>
+					<p class="sub-para content__title" data-splitting data-effect1>
+						ZenSonic headsets combine comfort and style with<br />
+						ergonomic designs and sleek aesthetics, delivering an<br />
+						immersive, fashionable listening experience.
+					</p>
+				</div>
+			</section>
+
+			<!--SECTION THREE-->
+			<section class="section third">
+				<div class="section--third--container">
+					<h3 class="sub-title content__title" data-splitting data-effect8>
+						Power Perseverance
+					</h3>
+					<p class="sub-para content__title mb-5" data-splitting data-effect1>
+						ZenSonic wireless headsets offer long-lasting battery<br />
+						life, allowing users to enjoy hours of uninterrupted<br />
+						playback on a single charge
+					</p>
+					<p>______________</p>
+					<button class="button--customize">
+						CUSTOMIZE
+					</button>
+				</div>
+			</section>
+
+			<!--SECTION FOUR-->
+			<section class="section--fourth--container z-10">
+				<button class="section--fourth--button">
+					BACK TO TOP
+				</button>
+			</section>
+
+			<footer class="footer--section">
+				<div class="footer--first--section">
+					<div class="footer--first--subsection1">
+						<div class="designed">
+							<h3 class="footer-text-1">
+								Designed And Developed By Reboot Consultancy And Services
+							</h3>
+						</div>
+						<div>
+							<h4 class="footer-text-2">Contact Details:-</h4>
+							<ul class="mt-4">
+								<li class="footer-text-3">
+									<a href="tel:+917057141513">
+										Contact Number:- +91 7057141513
+									</a>
+								</li>
+								<li class="footer-text-3">
+									<a href="https://maps.app.goo.gl/H2XPvBYv2nwPUunB9" target="_blank">
+										Location:- Kothrud Pune 411038
+									</a>
+								</li>
+								<li class="footer-text-3">
+									<a href="mailto:sales@rebootcas.com?subject=Subject%20Here&body=Body%20Text%20Here">
+										Email ID:- sales@rebootcas.com
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer--first--subsection2">
+						<img class="logo2" src="assets/images/Reboot.png" alt="Logo2">
+					</div>
+				</div>
+				<div class="footer--second--section">
+					<p class="footer-text-4">
+						Copyright © 2024 REBOOTCAS ®
+					</p>
+					<a href="https://in.linkedin.com/company/reboot-consultancy-services" target="_blank" class="">
+						<img src="assets/images/LinkedIn.png" alt="LinkedIn Logo" width="100" height="26">
+					</a>
+				</div>
+			</footer>
+
+		</div>
+	</main>
+
+
+	<!--3D MODEL DISPLAY-->
+	<div id="webgi-canvas-container">
+		<canvas id="webgi-canvas"></canvas>
+		<button class="button--customize button--exit">EXIT</button>
+	</div>
+
+
+	<!--COLOR CHANGE-->
+	<div class="customizer--container">
+		<ul class="strap--colors">
+			<li class="button--colors green"></li>
+			<li class="button--colors red"></li>
+			<li class="button--colors black"></li>
+		</ul>
+	</div>
+
+	<script src="src/index.ts"></script>
+	<script src="src/navbar.js"></script>
+	<script src="src/index2.js"></script>
+
+</body>
+
+</html>
